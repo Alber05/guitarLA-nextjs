@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
@@ -8,6 +8,10 @@ function MobileNav() {
   const pathName = usePathname()
 
   const [openMenu, setOpenMenu] = useState(false)
+
+  useEffect(() => {
+    setOpenMenu(false)
+  }, [pathName])
 
   const handleMenu = () => {
     setOpenMenu(!openMenu)

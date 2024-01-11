@@ -37,12 +37,7 @@ async function Tienda() {
 // Función asincrónica para obtener datos de la API
 export async function getData() {
   // Realizar una solicitud para obtener datos de guitarras desde la API
-  const response = await fetch(
-    `${process.env.API_URL}/guitars?populate=image`,
-    {
-      cache: 'no-store'
-    }
-  )
+  const response = await fetch(`${process.env.API_URL}/guitars?populate=image`)
 
   // Verificar si la solicitud fue exitosa
   if (!response.ok) {
