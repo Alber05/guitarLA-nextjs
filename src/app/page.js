@@ -36,8 +36,7 @@ export default async function Home() {
         Cursos
       </h2>
       <section className='mb-10 gap-10'>
-        {/* Renderizar información sobre cada curso */}
-        <Course key={courses.id} course={courses.attributes} />
+        <Course key={courses.id} course={courses?.attributes} />
       </section>
 
       {/* Separador visual */}
