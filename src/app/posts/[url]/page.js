@@ -14,9 +14,9 @@ export default async function Post({ params }) {
   if (!post) {
     notFound()
   }
-  console.log(post)
+
   // Extraer propiedades del post
-  const { title, contain, image } = post.attributes
+  const { title, contain, image } = post?.attributes
 
   // Renderizar la estructura principal de la página de un solo post
   return (
@@ -26,7 +26,7 @@ export default async function Post({ params }) {
       <article className='mx-auto mb-10 gap-2'>
         {/* Imagen del post */}
         <Image
-          src={image.data[0].attributes.formats.medium.url}
+          src={image?.data[0].attributes.formats.medium.url}
           width={500}
           height={375}
           alt={`Image of ${title} post`}
@@ -48,8 +48,7 @@ export default async function Post({ params }) {
 // Función asincrónica para obtener un post específico de la API
 export async function getPost(url) {
   const response = await fetch(
-    `${process.env.API_URL}/posts?filters[url]=${url}&populate=image`,
-    { cache: 'no-store' }
+    `${process.env.API_URL}/posts?filters[url]=${url}&populate=image`
   )
 
   // Verificar si la solicitud fue exitosa
@@ -74,7 +73,9 @@ export async function generateStaticParams() {
 
   // Extraer y devolver los parámetros estáticos necesarios para cada post
   const data = await response.json()
+
   const { data: posts } = data
+
   return posts.map((post) => ({
     url: post.attributes.url
   }))
