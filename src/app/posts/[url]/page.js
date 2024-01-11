@@ -14,7 +14,7 @@ export default async function Post({ params }) {
   if (!post) {
     notFound()
   }
-
+  console.log(post)
   // Extraer propiedades del post
   const { title, contain, image } = post.attributes
 
@@ -76,7 +76,7 @@ export async function generateStaticParams() {
   const data = await response.json()
   const { data: posts } = data
   return posts.map((post) => ({
-    url: post.url
+    url: post.attributes.url
   }))
 }
 
