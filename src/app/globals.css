@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.producto-carrito {
+  @apply grid grid-cols-4 gap-16 py-4 items-center border-b-[1px] border-[#cfcfcf];
+}
+
+.producto-carrito:last-of-type {
+  @apply border-none;
+}
