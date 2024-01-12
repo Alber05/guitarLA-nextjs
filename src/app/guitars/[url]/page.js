@@ -21,7 +21,7 @@ export default async function Guitar({ params }) {
 
   // Renderizar la estructura principal de la página de un solo producto (Guitar)
   return (
-    <main className='mx-auto flex min-h-[calc(100vh-200px)] w-[90%] flex-col  mb-10'>
+    <main className='mx-auto flex w-[90%] flex-col mb-10'>
       <BackButton />
       {/* Artículo de la guitarra */}
       <article className='mx-auto grid max-w-[600px] grid-cols-5 gap-2'>

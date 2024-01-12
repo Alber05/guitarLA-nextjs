@@ -22,7 +22,7 @@ function Carrito() {
   }, [cart])
 
   return (
-    <main className='mx-auto min-h-[calc(100vh-200px)] w-[90%] max-w-[1280px] mb-10'>
+    <main className='mx-auto w-[90%] max-w-[1280px] mb-10'>
       <BackButton />
       {/* Encabezado de la página */}
       <h1 className='mb-10 text-center text-4xl font-[700] text-[#D88506]'>

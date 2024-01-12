@@ -15,7 +15,7 @@ export default async function Blog() {
 
   // Renderizar la estructura principal de la página de Blog
   return (
-    <main className='w-[90%] mx-auto min-h-[calc(100vh-200px)] flex flex-col justify-evenly'>
+    <main className='w-[90%] mx-auto flex flex-col justify-evenly'>
       <BackButton />
       {/* Encabezado de la página */}
       <h1 className='text-center text-4xl my-10 text-[#D88506] font-[700]'>

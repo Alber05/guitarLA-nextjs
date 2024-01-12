@@ -20,7 +20,7 @@ export default async function Post({ params }) {
 
   // Renderizar la estructura principal de la página de un solo post
   return (
-    <main className='mx-auto flex min-h-[calc(100vh-200px)] w-[90%] flex-col justify-evenly'>
+    <main className='mx-auto flex w-[90%] flex-col justify-evenly'>
       <BackButton />
       {/* Artículo del post */}
       <article className='mx-auto mb-10 gap-2'>

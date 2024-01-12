@@ -17,12 +17,12 @@ function BackButton() {
           width='50px'
           height='50px'
           viewBox='0 0 24 24'
-          class='stroke-[#D88506]'
+          className='stroke-[#D88506]'
         >
           <path
-            stroke-linejoin='round'
-            stroke-linecap='round'
-            stroke-width='1.5'
+            strokeLinejoin='round'
+            strokeLinecap='round'
+            strokeWidth='1.5'
             d='M11 6L5 12M5 12L11 18M5 12H19'
           ></path>
         </svg>

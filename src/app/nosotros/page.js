@@ -10,7 +10,7 @@ export const metadata = {
 
 function Nosotros() {
   return (
-    <main className='mx-auto flex min-h-[calc(100vh-200px)] w-[90%] flex-col justify-evenly mb-10'>
+    <main className='mx-auto flex w-[90%] flex-col justify-evenly mb-10'>
       <div>
         <BackButton />
       </div>

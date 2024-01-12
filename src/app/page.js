@@ -16,7 +16,7 @@ export default async function Home() {
 
   // Renderizar la estructura principal de la página
   return (
-    <main className='mx-auto flex min-h-[calc(100vh-200px)] w-[90%] flex-col justify-evenly'>
+    <main className='mx-auto flex w-[90%] flex-col justify-evenly'>
       {/* Sección de la colección de guitarras */}
       <h1 className='my-10 text-center text-4xl font-black text-[#D88506] '>
         Nuestra colección
