@@ -18,7 +18,7 @@ export default async function Blog() {
     <main className='w-[90%] mx-auto flex flex-col justify-evenly'>
       <BackButton />
       {/* Encabezado de la página */}
-      <h1 className='text-center text-4xl my-10 text-[#D88506] font-[700]'>
+      <h1 className='text-center text-4xl mb-10 text-[#D88506] font-[700]'>
         Blog
       </h1>
       {/* Sección de grid para mostrar los posts */}

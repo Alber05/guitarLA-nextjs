@@ -8,7 +8,7 @@ function BackButton() {
   return (
     <div className='py-5 flex items-center'>
       <button
-        class='cursor-pointer duration-200 hover:scale-125 active:scale-100 block '
+        className='cursor-pointer duration-200 hover:scale-125 active:scale-100 block '
         title='Go Back'
         onClick={() => router.back()}
       >
