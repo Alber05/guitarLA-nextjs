@@ -23,8 +23,11 @@ export default async function Home() {
       </h1>
       <section className='mb-10 grid grid-cols-1 place-content-center gap-10 lg:grid-cols-2 xl:grid-cols-3'>
         {/* Mapear y renderizar cada guitarra en la colección */}
-        {guitars.map((guitar) => (
-          <Guitar key={guitar.id} guitar={guitar} />
+        {guitars?.map((guitar) => (
+          <Guitar
+            key={guitar.id}
+            guitar={guitar}
+          />
         ))}
       </section>
 
@@ -36,7 +39,10 @@ export default async function Home() {
         Cursos
       </h2>
       <section className='mb-10 gap-10'>
-        <Course key={courses.id} course={courses?.attributes} />
+        <Course
+          key={courses.id}
+          course={courses?.attributes}
+        />
       </section>
 
       {/* Separador visual */}
@@ -49,7 +55,10 @@ export default async function Home() {
       <section className='grid place-content-center mb-10 gap-10 lg:grid-cols-2 xl:grid-cols-3'>
         {/* Mapear y renderizar cada entrada de blog */}
         {posts?.map((post) => (
-          <Post key={post.id} post={post.attributes} />
+          <Post
+            key={post.id}
+            post={post.attributes}
+          />
         ))}
       </section>
     </main>
