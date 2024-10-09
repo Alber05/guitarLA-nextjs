@@ -63,22 +63,26 @@ export async function getPost(url) {
 
 // Función asincrónica para generar los parámetros estáticos para la generación de páginas estáticas
 export async function generateStaticParams() {
-  // Realizar una solicitud para obtener datos de todos los posts
-  const response = await fetch(`${process.env.API_URL}/posts?populate=image`)
+  try {
+    // Realizar una solicitud para obtener datos de todos los posts
+    const response = await fetch(`${process.env.API_URL}/posts?populate=image`)
 
-  // Verificar si la solicitud fue exitosa
-  if (!response.ok) {
-    throw new Error('Failed to fetch data')
+    // Verificar si la solicitud fue exitosa
+    if (!response.ok) {
+      throw new Error('Failed to fetch data')
+    }
+
+    // Extraer y devolver los parámetros estáticos necesarios para cada post
+    const data = await response.json()
+
+    const { data: posts } = data
+
+    return posts.map((post) => ({
+      url: post.attributes.url
+    }))
+  } catch (error) {
+    console.log(error.message)
   }
-
-  // Extraer y devolver los parámetros estáticos necesarios para cada post
-  const data = await response.json()
-
-  const { data: posts } = data
-
-  return posts.map((post) => ({
-    url: post.attributes.url
-  }))
 }
 
 // Función asincrónica para generar metadatos para SEO
